@@ -17,7 +17,7 @@ on:
         options:
           - patch
           - minor
-          - major
+          #- major
 
 jobs:
   main:
@@ -30,9 +30,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: release
-        uses: peaceiris/gh-release-with-wf-dispatch@feat-semver-input
+        uses: peaceiris/gh-release-with-wf-dispatch@refactor-all
         with:
           github_token: ${{ secrets.GH_PAT }}
           release_file_path: ${{ github.event.inputs.release_file_path }}
-          base_branch: "main"
           next_semver_level: ${{ github.event.inputs.next_semver_level }}
