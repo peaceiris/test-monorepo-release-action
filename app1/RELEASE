@@ -1,11 +1,9 @@
 name: app1/microservice
-tag: app1/microservice/v0.0.1
-
+tag: app1/microservice/v0.0.2
 commitInclude:
   parentOfMergeCommit: true
   contains:
     - app/app1/microservice
-
 releaseNoteGenerator:
   usePullRequestMetadata: true
   commitInclude:
