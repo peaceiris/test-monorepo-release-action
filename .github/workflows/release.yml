@@ -33,8 +33,6 @@ jobs:
         uses: peaceiris/gh-release-with-wf-dispatch@feat-semver-input
         with:
           github_token: ${{ secrets.GH_PAT }}
-          owner: ${{ github.event.repository.owner.login }}
-          repo: ${{ github.event.repository.name }}
           release_file_path: ${{ github.event.inputs.release_file_path }}
           base_branch: "main"
           next_semver_level: ${{ github.event.inputs.next_semver_level }}
