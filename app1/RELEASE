@@ -1,5 +1,5 @@
 name: app1/microservice
-tag: app1/microservice/v0.0.2
+tag: app1/microservice/v1.0.0
 commitInclude:
   parentOfMergeCommit: true
   contains:
