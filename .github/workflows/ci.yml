@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions: {}
+    timeout-minutes: 1
+    steps:
+      - uses: actions/checkout@v3
+      - name: test
+        run: echo "Hello, world!"
