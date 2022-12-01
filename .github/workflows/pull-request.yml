@@ -8,7 +8,8 @@ jobs:
   merge:
     if: ${{ (github.event.issue.pull_request) && (github.event.comment.body == '/merge') }}
     runs-on: ubuntu-22.04
-    permissions: {}
+    permissions:
+      pull-requests: write
     timeout-minutes: 3
     steps:
       - uses: abema/github-actions-merger@deps-change-distroless-base-to-static
