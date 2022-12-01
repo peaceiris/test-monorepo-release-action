@@ -8,13 +8,12 @@ jobs:
   merge:
     if: ${{ (github.event.issue.pull_request) && (github.event.comment.body == '/merge') }}
     runs-on: ubuntu-22.04
-    permissions:
-      pull-requests: write
+    permissions: {}
     timeout-minutes: 3
     steps:
       - uses: abema/github-actions-merger@deps-change-distroless-base-to-static
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAT }}
           owner: ${{ github.event.repository.owner.login }}
           repo: ${{ github.event.repository.name }}
           pr_number: ${{ github.event.issue.number }}
